@@ -1,1 +1,5 @@
-str1="3+2+"
+str=input()
+newstr=str.split('+')
+numbers = [int(num) for num in newstr]
+
+print(numbers)
