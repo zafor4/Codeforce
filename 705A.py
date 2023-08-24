@@ -1,15 +1,15 @@
-numberofProblem=int(input())
-time=int(input())
-timeleft=240-time
-i=5
-j=5
+problems=int (input())
+minuits=int (input())
+time_Left=240-minuits
+timeCount=0
 count=0
-while(i<=timeleft):
-    if (count==numberofProblem):
+if (time_Left%5!=0):
+    time_Left=time_Left-(time_Left%5)
+
+while(timeCount<time_Left):
+    count+=1
+    timeCount+=5*count
+    if (count==problems):
         break
 
-    j+=5
-    i+=j
-    count += 1
-print(count)
-
+print(count)    
