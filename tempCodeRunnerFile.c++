@@ -1,1 +1,1 @@
-#include <bits/stdc++.h>
+ // str2[k]=strcpy(str[i]);
