@@ -1,30 +1,28 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include<algorithm>
 using namespace std;
-int main()
-{
-    char str[100] = "GeeksforGeeks";
-    char  str2[100];
-    int k=0;
-    for (int i = 0; i < strlen(str); i++)
-    {
-        int flag = 0;
-        for (int j = 0; j < strlen(str); j++)
-        {
-            // checking if two characters are equal
-            if (str[i] == str[j] and i != j)
-            {
-                flag = 1;
-                break;
-            }
+
+int main() {
+    string s;
+    cin >> s;
+
+    vector<char> distinctChars;
+
+    for (char c : s) {
+        if (find(distinctChars.begin(), distinctChars.end(), c) == distinctChars.end()) {
+            distinctChars.push_back(c);
         }
-        if (flag == 0)
-            // cout << str[i];
-            str2[k]=str[i];
-            k++;
-            
     }
-    for (int i=0;i<strlen(str2);i++){
-        cout<<str2[i];
+
+    string result(distinctChars.begin(), distinctChars.end());
+    
+    if (result.size() % 2 == 0) {
+        cout << "CHAT WITH HER!" << endl;
+    } else {
+        cout << "IGNORE HIM!" << endl;
     }
+
     return 0;
 }
