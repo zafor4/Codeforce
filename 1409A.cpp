@@ -1,21 +1,21 @@
 #include<iostream>
-using namespace std ;
-int main(){
-    int test,a,b;
-    cin>>test;
-    for (int i=0;i<test;i++){
-        cin>>a>>b;
-        if (a==b){
-            cout<<0<<endl;
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    
+    while (t--) {
+        int a, b;
+        cin >> a >> b;
+        
+        int diff = abs(a - b);
+        int moves = diff / 10;
+        if (diff % 10 != 0) {
+            moves++;
         }
-        else {
-            if (a>b){
-                int temp=a;
-                a=b;
-                b=temp;
-            }
-            while (a<)
-        }
+        
+        cout << moves << endl;
     }
 
     return 0;
